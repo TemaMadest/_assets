@@ -1,0 +1,13 @@
+doctype html
+html(lang="ru")
+  include chunks/head.jade
+  body(ng-app="my_app")
+    .main(ng-controller="MainController")
+      .container
+        .card(ng-repeat="prod in apps")
+          app-info(info="prod")
+          install-Up
+        .card(ng-repeat="prod in data")
+          app-info(info="prod")
+          install-Up
+        div(ng-view)

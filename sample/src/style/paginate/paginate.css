@@ -1,0 +1,137 @@
+html,
+body,
+div,
+table,
+tr,
+td,
+ul,
+li,
+fieldset,
+form,
+input,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+header,
+footer,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+@font-face {
+  font-family: 'whipsmart';
+  src: url('/src/fonts/ppzGfTDY.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nord Medium';
+  src: url('/src/fonts/Nord Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'whipsmart', sans-serif;
+  font-size: 16px;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+header,
+section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+header {
+  background-blend-mode: multiply;
+  background: url('/src/img/dota.jpg') rgba(0, 0, 0, 0.43);
+}
+.header {
+  padding: 30px;
+}
+.header ul {
+  text-align: right;
+}
+.header ul li {
+  display: inline-block;
+}
+.header ul li a {
+  display: block;
+  padding: 10px 8px;
+  font-family: Nord Medium;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+.header ul li a:hover {
+  border-color: #ffffff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#first {
+  background: url('/src/img/dota.jpg') no-repeat 100% / cover;
+}
+#second {
+  background: url('/src/img/DarknessBG1.jpg') no-repeat 100% / cover;
+}
+#third {
+  background: url('/src/img/fon.jpg') no-repeat 100% / cover;
+}
+#fourth {
+  background: url('/src/img/java_logo-1920x1080.jpg') no-repeat 100% / cover;
+}
+nav {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  right: 25px;
+}
+nav ul {
+  display: table;
+  vertical-align: middle;
+}
+nav ul li {
+  margin: 15px;
+}
+nav ul li.active {
+  margin: 14px;
+}
+nav ul li.active span {
+  width: 12px;
+  height: 12px;
+  background: #f2f2f2;
+}
+nav ul li span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #f2f2f2;
+  cursor: pointer;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+
+<head>
+  <title>Отчеты</title>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrap-btn">    
+    <div class="rss">  
+      <input type="checkbox" id="buttonThree">
+      <label for="buttonThree">
+        <i></i>
+      </label>    
+    </div>    
+  </div>
+  
+  <form action="koley.php" method="post" id="report">
+    <label>Ведомость на списание</label>
+    <input type="hidden" name="blank" value="report">
+    <textarea name="fio" class="fio" placeholder="ФИО" maxlength="100"></textarea>
+    <textarea name="work" class="work" placeholder="Должность" maxlength="100"></textarea>
+    <textarea name="title" class="title" placeholder="Наименование лечебного учреждения" maxlength="100"></textarea>
+    <textarea name="adres" class="adres" placeholder="Адрес лечебного учреждения" maxlength="100"></textarea>
+    <textarea name="name" class="name" placeholder="Наименование аппарата" maxlength="100"></textarea>
+    <textarea name="manufacturer" class="manufacturer" placeholder="Изготовитель" maxlength="100"></textarea>
+    <textarea name="date" class="date" placeholder="Год выпуска" maxlength="100"></textarea>
+    <textarea name="releaze_num" class="releaze_num" placeholder="Заводской №" maxlength="100"></textarea>
+    <textarea name="inv_num" class="inv_num" placeholder="Инв. №" maxlength="100"></textarea>
+    <textarea name="year" class="year" placeholder="Сколько лет находится в эксплуатации" maxlength="100"></textarea>
+    <textarea name="conditions" class="conditions" placeholder="Условия эксплуатации (сменность работы, загрузка аппарата)" maxlength="100"></textarea>
+    <textarea name="price" class="price" placeholder="Балансовая стоимость" maxlength="100"></textarea>
+    <textarea name="service" class="service" placeholder="Вид и количество проведенных ремонтов" maxlength="100"></textarea>
+    <textarea name="description" class="description" placeholder="Подробное описание технического состояния аппарата" maxlength="400"></textarea>
+    <textarea name="reason" class="reason" placeholder="Причина списания аппарата" maxlength="400"></textarea>
+    <input class="submit vns" value="Готово" type="submit">
+  </form>
+  
+  <form action="koley.php" method="post" id="deff" class="middlepos">
+    <label>Деффектный акт</label>
+    <input type="hidden" name="blank" value="deff">
+    <textarea name="fio" class="fio" placeholder="ФИО" maxlength="100"></textarea>
+    <textarea name="title" class="title" placeholder="Наименование лечебного учреждения" maxlength="100"></textarea>
+    <textarea name="adres" class="adres" placeholder="Адрес лечебного учреждения" maxlength="100"></textarea>
+    <textarea name="name" class="name" placeholder="Наименование аппарата" maxlength="100"></textarea>
+    <textarea name="manufacturer" class="manufacturer" placeholder="Изготовитель" maxlength="100"></textarea>
+    <textarea name="date" class="date" placeholder="Год выпуска" maxlength="100"></textarea>
+    <textarea name="releazenum" class="releaze_num" placeholder="Заводской №"></textarea>    
+    <textarea name="dogovor" class="dogovor" placeholder="Наличие договора на КТО" maxlength="100"></textarea>
+    <textarea name="check" class="check" placeholder="Обнаруженная неисправность" maxlength="200"></textarea>
+    <textarea name="device_list" class="device_list" placeholder="Оборудование необходимое для ремонта" maxlength="200"></textarea>
+    <textarea name="documentation" class="documentation" placeholder="Наличие технической документации" maxlength="100"></textarea>
+    <textarea name="conclusion" class="conclusion" placeholder="Техническое заключение" maxlength="400"></textarea>
+    <textarea name="sentence" class="sentence" placeholder="Предложение" maxlength="400"></textarea>
+    <input class="submit dfa" value="Готово" type="submit">
+  </form>
+
+  <script>
+    (function(){
+      var btn = $('#buttonThree');
+      var hide_show = function(elements){
+        $(elements[0]).addClass('middlepos');
+        $(elements[1]).removeClass('middlepos');
+      };      
+      var swap = function(){
+       var self = this;        
+        if(self.checked){
+          hide_show([$('#report'), $('#deff')]);
+        }else{
+          hide_show([$('#deff'), $('#report')]);
+        }      
+      };
+      
+      
+      $(document).on('ready', function(){
+        var s = $('#buttonThree')[0];
+        if(s.checked){
+          hide_show([$('#report'), $('#deff')]);
+        }else{
+          hide_show([$('#deff'), $('#report')]);
+        }
+      });
+      $(btn).on('change', swap);
+    }());
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,62 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	list-style-type: none;
+}
+div{
+	display:block;
+}
+
+html, body{
+	width:100%;
+	font-family:sans-serif;
+	font-size:1rem;
+
+	.main{
+		max-width: 1240px;
+    margin: 0 auto;
+
+		.container{
+			display:flex;
+			flex-direction:row;
+			flex-flow: row wrap;
+			.card{
+				width: 33.33%;
+				text-align:center;
+				margin-bottom: 1rem;
+				padding-top:1rem;
+				transition: .3s ease;
+				.wrapp{
+					width:100%;
+						img{
+							max-width: 370px;
+							margin: 0 auto;
+							display: block;
+							max-height: 250px;
+					}
+				}
+					button.btn{
+						padding: 10px;
+						background: #ddd;
+						border: 1px solid #cbcbcb;
+						border-radius: 3px;
+						outline:none;
+						cursor:pointer;
+					}
+					.btn-active{
+						button{
+							color:red;						
+						}
+					}
+				
+				&:hover{
+					background: #ddded1;
+					transition: .3s ease;
+					cursor:pointer;
+				}
+			}	
+		}
+	}
+}
+

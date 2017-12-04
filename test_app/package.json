@@ -1,0 +1,40 @@
+{
+  "name": "test_app",
+  "version": "1.0.0",
+  "description": "test app on angular.js",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "script"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git repository"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Madest",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "concat": "^2.0.0",
+    "connect": "^3.4.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-coffee": "^2.3.2",
+    "gulp-connect-php": "0.0.7",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-uncss": "^1.0.5",
+    "gulp-watch": "^4.3.8"
+  }
+}

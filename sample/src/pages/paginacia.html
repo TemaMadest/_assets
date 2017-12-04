@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>test | Пагинация</title>
+    <link href="../style/paginate/scroll.css" rel="stylesheet" type="text/css">
+    <link href="../style/paginate/paginate.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/jquery.onepage-scroll.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.main').onepage_scroll({
+                sectionContainer: "section",
+                loop: false,
+                responsiveFallback: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul class="mid">
+                <li class="first active"><a href="paginacia" title="Пагинация">Пагинация</a></li>
+                <li><a href="magazin/" title="Магазин">Магазин</a></li>
+                <li><a href="lichnyij-kabinet/" title="Личный кабинет">Личный кабинет</a></li>
+                <li><a href="galereya" title="Галерея">Галерея</a></li>
+                <li><a href="webgl" title="WebGl">WebGl</a></li>
+                <li><a href="svg" title="SVG">SVG</a></li>
+                <li class="last"><a href="sledovanie-za-myishkoj" title="Следование за мышкой">Следование за мышкой</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="main">
+        <section id="first"></section>
+        <section id="second"></section>
+        <section id="third"></section>
+        <section id="fourth"></section>
+        <section></section>
+    </div>
+
+    <footer>
+        <div class="footer">
+    </footer>
+</body>
+
+</html>
