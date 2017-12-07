@@ -1,0 +1,17 @@
+<!--script src="jsonrpc-lite-master/jsonrpc.js"></script>
+<script>
+
+var json = '[{"jsonrpc":"2.0","method":"user.search","params":{"q":"ivanov ivanov","pagenum":2,"limit":10,"fields":{"journaltype":true,"journal_title":true,"updated":true,"is_friend":true,"journal_url":true},"auth_token":"sessionless:1512478800:/__api/::e51e329e97fa8879d3ed8065f19da40c3fac3fdf"},"id":4}]';
+
+
+const requestObj = window.jsonrpc.request('123', 'update', {list: [1, 2, 3]});
+
+
+
+console.log(requestObj);
+
+</script-->
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="request.js"></script>
